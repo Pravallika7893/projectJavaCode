@@ -55,7 +55,6 @@ public class NTJavacode {
 			
 		WebElement username = driver.findElement(By.xpath("//input[@name=\"email\"]"));
 		username.sendKeys("mercury");
-		
 		WebElement pswd = driver.findElement(By.xpath("//input[@name=\"password\"]"));
 		pswd.sendKeys("mercury");
 		JavascriptExecutor js = (JavascriptExecutor) driver;
@@ -65,7 +64,8 @@ public class NTJavacode {
 		WebElement submit = driver.findElement(By.xpath("//input[@name=\"submit\"]"));
 		submit.click();
 		
-		// login the page
+// login the page
+		
 		driver.findElement(By.xpath("//a[normalize-space()='sign-in']")).click();
 		driver.findElement(By.name("userName")).sendKeys("mercury");
 		driver.findElement(By.name("password")).sendKeys("mercury");
@@ -79,7 +79,7 @@ public class NTJavacode {
 			System.out.println("Login is not successfully");
 		}
 	
-		//flight page land
+//flight page land
 		
 		driver.findElement(By.linkText("Flights")).click();
 		if(driver.getCurrentUrl().contains("reservation")) {
@@ -88,7 +88,7 @@ public class NTJavacode {
 		else {
 			System.out.println("The user has not landed on the flight reservation page");
 		}
-		// radiobtn
+// radiobtn
 		
 	    WebElement rbutton = driver.findElement(By.cssSelector("input[value='roundtrip']"));
 		boolean selectState = rbutton.isSelected();
